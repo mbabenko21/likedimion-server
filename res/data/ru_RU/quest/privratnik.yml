@@ -1,0 +1,7 @@
+test_quest:
+  replics:
+    start: ""
+    end: ""
+  reward:
+    experience: 410
+    money: 700

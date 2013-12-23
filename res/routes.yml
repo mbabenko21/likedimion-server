@@ -1,0 +1,28 @@
+base:
+  path: "/"
+  defaults: {_controller: "Likedimion\\Client\\Controller\\TestController:index"}
+
+account_reg:
+  path: "/account/reg"
+  defaults: {_controller: "Likedimion\\Client\\Api\\RegistrationController:accountRegistration"}
+
+account_auth:
+  path: "/account/auth"
+  defaults: {_controller: "Likedimion\\Client\\Api\\AuthController:accountAuth"}
+
+account_token_submit:
+  path: "/account/token_submit"
+  defaults: {_controller: "Likedimion\\Client\\Api\\AuthController:isLogin"}
+
+account_get_players:
+  path: "/account/players.get"
+  defaults: {_controller: "Likedimion\\Client\\Api\\AccountController:playersGet"}
+
+
+player_create:
+  path: "/player/create"
+  defaults: {_controller: "Likedimion\\Client\\Api\\PlayerController:create"}
+
+test:
+  path: "test"
+  defaults: {_controller: "Likedimion\Client\Controller\TestController:index"}

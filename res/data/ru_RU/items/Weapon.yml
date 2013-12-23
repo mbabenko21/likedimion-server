@@ -1,0 +1,41 @@
+knife.beginner:
+  name: "нож новобранца"
+  info: "тут должно быть описание"
+  min_phys_damage: 1
+  max_phys_damage: 3
+  requires:
+    level: 1
+
+sword.beginner:
+  name: "меч новобранца"
+  info: "тут должно быть описание"
+  min_phys_damage: 1
+  max_phys_damage: 3
+  requires:
+    level: 1
+
+bow.beginner:
+  name: "лук новобранца"
+  info: "тут должно быть описание"
+  min_phys_damage: 1
+  max_phys_damage: 3
+  requires:
+    level: 1
+
+pistoil.beginner:
+  name: "пистолет новичка"
+  info: "тут должно быть описание"
+  min_phys_damage: 1
+  max_phys_damage: 3
+    requires:
+      level: 1
+
+staff.beginner:
+  name: "посох новичка"
+  info: "тут должно быть описание"
+  min_phys_damage: 0
+  max_phys_damage: 0
+  min_mag_damage: 1
+  max_mag_damage: 2
+    requires:
+      level: 1

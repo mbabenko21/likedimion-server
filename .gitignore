@@ -1,0 +1,6 @@
+vendor/*
+.idea/*
+composer.lock
+res/config.yml
+/README.md
+/vendor

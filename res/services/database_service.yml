@@ -1,0 +1,38 @@
+services:
+  account_service:
+    class: "%account_service_class%"
+    calls:
+      - ['setEm', ['@entity_manager']]
+      - ['setEntityClass', ['%account_entity%']]
+
+  player_service:
+      class: "%player_service_class%"
+      calls:
+        - ['setEm', ['@entity_manager']]
+        - ['setAuthService', ['@auth_service']]
+        - ['setEntityClass', ['%player_entity%']]
+        - ["setEventDispatcher", ["@event_dispatcher"]]
+        - ["setExportWhiteList", ['%player_export_white_list%']]
+  ## Серверная авторизация
+  auth_service:
+    class: "%auth_service_class%"
+    calls:
+      - ['setAccountService', ['@account_service']]
+      - ['setTokenService',   ['@token_service']]
+
+  ##Работа с токенами
+  token_service:
+    class: "%token_service_class%"
+    calls:
+      - ['setEm', ['@entity_manager']]
+      - ['setEntityClass', ['%token_entity%']]
+
+  ## Регистрация персонажа
+  player_registration_service:
+    class: "%player_registration_service_class%"
+    calls:
+      - ['setPlayerService', ['@player_service']]
+      - ['setAuthService', ['@auth_service']]
+      - ['setAccountService', ['@account_service']]
+      - ['setPlayerCalculatingService', ['@player_calculate_params_serice']]
+

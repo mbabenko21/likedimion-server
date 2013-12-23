@@ -1,0 +1,12 @@
+name: "Город Likedimion"
+info: ""
+tag: "likedimion_town"
+
+locations:
+  start:
+    name: "Начало"
+    info: ""
+    is_guard: true
+    doors:
+      - ["к дому лекаря", "healer_"]
+

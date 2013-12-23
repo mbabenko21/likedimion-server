@@ -1,0 +1,11 @@
+services:
+  player_calculate_params_serice:
+    class: "%player_calculate_params_serice_class%"
+    calls:
+      - ['setExpTableService', ['@exp_table_service']]
+  exp_table_service:
+    class: "%exp_table_service_class%"
+
+  serializer_service:
+        class: "%serializer_class%"
+        arguments: ["%normalizers_classes%", "%encoders_classes%"]

@@ -1,0 +1,19 @@
+services:
+  event_manager:
+    class: "Symfony\\Component\\EventDispatcher\\EventManager"
+
+  player_listener:
+    class: "%player_listener_class%"
+    arguments: ["@player_service", "@player_calculate_params_serice", "@exp_table_service"]
+    calss:
+      #- ['setPlayerService', ["@player_service"]]
+      #- ['setCalculatingService', ["@player_calculate_params_serice"]]
+      #- ['setExpTableService', ["@exp_table_service"]]
+
+
+
+
+  event_dispatcher:
+      class: "%event_dispatcher_class%"
+      calls:
+        - ['addListeners']

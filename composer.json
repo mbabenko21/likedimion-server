@@ -1,0 +1,26 @@
+{
+	"require": {
+        "php": ">=5.3.3",
+
+		"symfony/yaml": "2.5.*@dev",
+		"symfony/dependency-injection": "2.5.*@dev",
+        "symfony/console": "2.5.*@dev",
+        "symfony/event-dispatcher": "2.2.*@dev",
+        "symfony/http-foundation": "2.5.*@dev",
+        "symfony/config": "2.5.*@dev",
+        "symfony/routing": "2.5.*@dev",
+        "symfony/serializer": "2.5.*@dev",
+
+
+		"doctrine/orm": "2.4.*",
+		"doctrine/collections": "1.2.*@dev",
+		"doctrine/annotations": "1.0.*@dev",
+		"doctrine/common": "2.4.*",
+		"doctrine/dbal": "2.4.*",
+		"doctrine/migrations": "1.0.*@dev",
+
+		"smarty/smarty": "dev-trunk",
+
+        "ircmaxell/password-compat": "dev-master"
+	}
+}
