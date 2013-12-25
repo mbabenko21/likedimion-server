@@ -64,10 +64,10 @@ class PlayerStatistic extends \Likedimion\Database\Entity\PlayerStatistic implem
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'PVP', 'PVE', 'ArenaPVP');
+            return array('__isInitialized__', 'id', 'player', 'PVP', 'PVE', 'ArenaPVP');
         }
 
-        return array('__isInitialized__', 'id', 'PVP', 'PVE', 'ArenaPVP');
+        return array('__isInitialized__', 'id', 'player', 'PVP', 'PVE', 'ArenaPVP');
     }
 
     /**
@@ -186,6 +186,28 @@ class PlayerStatistic extends \Likedimion\Database\Entity\PlayerStatistic implem
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', array());
 
         return parent::getId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getPlayer()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlayer', array());
+
+        return parent::getPlayer();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPlayer($player)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlayer', array($player));
+
+        return parent::setPlayer($player);
     }
 
     /**

@@ -65,5 +65,7 @@ class AccountRepositoryImpl extends EntityRepository implements AccountRepositor
     public function remove(Account $account)
     {
         $this->_em->remove($account);
+        $this->_em->flush();
     }
+
 }

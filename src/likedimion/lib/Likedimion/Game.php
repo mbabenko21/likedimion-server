@@ -124,4 +124,12 @@ class Game
     {
         $this->_authToken = $authToken;
     }
+
+    /**
+     * @param $id
+     * @return object
+     */
+    public function get($id){
+        return $this->getContainer()->get($id);
+    }
 } 

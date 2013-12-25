@@ -51,7 +51,11 @@ class Account {
     /**
      * @var ArrayCollection
      *
-     * @OneToMany(targetEntity="Player", mappedBy="account", cascade={"persist", "remove", "merge"})
+     * @ManyToMany(targetEntity="Player", inversedBy="id", cascade={"persist", "remove"})
+     * @JoinTable(name="account_players",
+     *      joinColumns={@JoinColumn(name="account_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="player_id", referencedColumnName="id")}
+     *      )
      */
     protected $players;
     /**
@@ -75,9 +79,9 @@ class Account {
 
     public function __construct(){
         $this->setCreatedDate(new \DateTime("now"));
+        $this->players = new ArrayCollection();
     }
-    /**
-     * @return mixed
+    /** @return mixed
      */
     public function getId()
     {

@@ -64,10 +64,10 @@ class PlayerCharParams extends \Likedimion\Database\Entity\PlayerCharParams impl
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'life', 'maxLife', 'mana', 'maxMana', 'isCrim', 'isDead', 'crimStatus', 'status', 'experience', 'needExperience', 'level', 'lastLifeRegenerationTime', 'lastManaRegenerationTime', 'invisible', 'experienceRate');
+            return array('__isInitialized__', 'player', 'id', 'life', 'maxLife', 'mana', 'maxMana', 'isCrim', 'isDead', 'crimStatus', 'status', 'experience', 'needExperience', 'level', 'lastLifeRegenerationTime', 'lastManaRegenerationTime', 'invisible');
         }
 
-        return array('__isInitialized__', 'id', 'life', 'maxLife', 'mana', 'maxMana', 'isCrim', 'isDead', 'crimStatus', 'status', 'experience', 'needExperience', 'level', 'lastLifeRegenerationTime', 'lastManaRegenerationTime', 'invisible', 'experienceRate');
+        return array('__isInitialized__', 'player', 'id', 'life', 'maxLife', 'mana', 'maxMana', 'isCrim', 'isDead', 'crimStatus', 'status', 'experience', 'needExperience', 'level', 'lastLifeRegenerationTime', 'lastManaRegenerationTime', 'invisible');
     }
 
     /**
@@ -173,6 +173,39 @@ class PlayerCharParams extends \Likedimion\Database\Entity\PlayerCharParams impl
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getPlayer()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlayer', array());
+
+        return parent::getPlayer();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPlayer($player)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlayer', array($player));
+
+        return parent::setPlayer($player);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addExperience($experience)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addExperience', array($experience));
+
+        return parent::addExperience($experience);
+    }
+
     /**
      * {@inheritDoc}
      */
@@ -505,28 +538,6 @@ class PlayerCharParams extends \Likedimion\Database\Entity\PlayerCharParams impl
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setInvisible', array($invisible));
 
         return parent::setInvisible($invisible);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getExperienceRate()
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getExperienceRate', array());
-
-        return parent::getExperienceRate();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setExperienceRate($experienceRate)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExperienceRate', array($experienceRate));
-
-        return parent::setExperienceRate($experienceRate);
     }
 
 }

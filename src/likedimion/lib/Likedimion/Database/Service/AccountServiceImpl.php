@@ -93,4 +93,12 @@ class AccountServiceImpl implements AccountServiceInterface {
             throw new AccountServiceException("passwords_not_confirm");
         }
     }
+
+    /**
+     * @return string
+     */
+    public function getEntityClass()
+    {
+        return $this->entityClass;
+    }
 }

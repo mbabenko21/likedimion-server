@@ -49,7 +49,8 @@ class Player
 
     /**
      * @var Account
-     * @ManyToOne(targetEntity="Account", inversedBy="players")
+     * @OneToOne(targetEntity="Account")
+     * @JoinColumn(name="account_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $account;
     /**

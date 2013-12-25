@@ -64,10 +64,10 @@ class PlayerStats extends \Likedimion\Database\Entity\PlayerStats implements \Do
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'strenge', 'dexterity', 'intelligence', 'endurance', 'spirituality');
+            return array('__isInitialized__', 'player', 'id', 'strenge', 'dexterity', 'intelligence', 'endurance', 'spirituality');
         }
 
-        return array('__isInitialized__', 'id', 'strenge', 'dexterity', 'intelligence', 'endurance', 'spirituality');
+        return array('__isInitialized__', 'player', 'id', 'strenge', 'dexterity', 'intelligence', 'endurance', 'spirituality');
     }
 
     /**
@@ -173,6 +173,28 @@ class PlayerStats extends \Likedimion\Database\Entity\PlayerStats implements \Do
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getPlayer()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlayer', array());
+
+        return parent::getPlayer();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPlayer($player)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlayer', array($player));
+
+        return parent::setPlayer($player);
+    }
+
     /**
      * {@inheritDoc}
      */

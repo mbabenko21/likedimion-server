@@ -11,8 +11,7 @@ services:
         - ['setEm', ['@entity_manager']]
         - ['setAuthService', ['@auth_service']]
         - ['setEntityClass', ['%player_entity%']]
-        - ["setEventDispatcher", ["@event_dispatcher"]]
-        - ["setExportWhiteList", ['%player_export_white_list%']]
+        #- ["setExportWhiteList", ['%player_export_white_list%']]
   ## Серверная авторизация
   auth_service:
     class: "%auth_service_class%"

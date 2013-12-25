@@ -15,6 +15,7 @@ interface AccountRepositoryInterface {
     /**
      * @param string $login
      * @return Account
+     * @deprecated
      */
     public function findByLogin($login);
     /**

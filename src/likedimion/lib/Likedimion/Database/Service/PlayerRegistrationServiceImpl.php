@@ -63,7 +63,7 @@ class PlayerRegistrationServiceImpl implements PlayerRegistrationServiceInterfac
             $this->playerService->getRepository()->save($player);
 
             $account = $this->authService->getAccount(Game::getInstance()->getAuthToken()->getValue());
-            $account->addPlayer($player);
+            $player->setAccount($account);
             $this->accountService->getRepository()->save($account);
 
             $this->playerService->getRepository()->save($player);

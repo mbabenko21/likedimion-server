@@ -64,10 +64,10 @@ class PlayerWarParameters extends \Likedimion\Database\Entity\PlayerWarParameter
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return array('__isInitialized__', 'id', 'pHit', 'mHit', 'pMinDamage', 'mMinDamage', 'pMaxDamage', 'mMaxDamage', 'pDef', 'mDef', 'pShield', 'mShield', 'pBias', 'mBias', 'pCrit', 'mCrit');
+            return array('__isInitialized__', 'player', 'id', 'pHit', 'mHit', 'pMinDamage', 'mMinDamage', 'pMaxDamage', 'mMaxDamage', 'pDef', 'mDef', 'pShield', 'mShield', 'pBias', 'mBias', 'pCrit', 'mCrit');
         }
 
-        return array('__isInitialized__', 'id', 'pHit', 'mHit', 'pMinDamage', 'mMinDamage', 'pMaxDamage', 'mMaxDamage', 'pDef', 'mDef', 'pShield', 'mShield', 'pBias', 'mBias', 'pCrit', 'mCrit');
+        return array('__isInitialized__', 'player', 'id', 'pHit', 'mHit', 'pMinDamage', 'mMinDamage', 'pMaxDamage', 'mMaxDamage', 'pDef', 'mDef', 'pShield', 'mShield', 'pBias', 'mBias', 'pCrit', 'mCrit');
     }
 
     /**
@@ -173,6 +173,28 @@ class PlayerWarParameters extends \Likedimion\Database\Entity\PlayerWarParameter
     }
 
     
+    /**
+     * {@inheritDoc}
+     */
+    public function getPlayer()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPlayer', array());
+
+        return parent::getPlayer();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setPlayer($player)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPlayer', array($player));
+
+        return parent::setPlayer($player);
+    }
+
     /**
      * {@inheritDoc}
      */
