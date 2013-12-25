@@ -1,4 +1,11 @@
 {
+    "name": "mbabenko21/likedimion-server",
+    "type": "library",
+    "description": "Likedimion Server",
+    "keywords": ["online game", "database"],
+    "authors": [
+        {"name": "Maks Babenko", "email": "mbabenko21@gmail.com"}
+    ],
 	"require": {
         "php": ">=5.3.3",
 

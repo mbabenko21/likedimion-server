@@ -1,6 +1,6 @@
 base:
   path: "/"
-  defaults: {_controller: "Likedimion\\Client\\Controller\\TestController:index"}
+  defaults: {_controller: "Likedimion\\Client\\Controller\\BaseController:index"}
 
 account_reg:
   path: "/account/reg"

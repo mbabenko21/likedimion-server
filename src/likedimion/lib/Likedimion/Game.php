@@ -10,9 +10,9 @@ namespace Likedimion;
 
 
 use Likedimion\Common\StringCommon;
-use Likedimion\Database\Entity\Account;
 use Likedimion\Database\Entity\Token;
 use Likedimion\Kernel\DoctrineBootstrap;
+use Likedimion\Kernel\RoutingBootstrap;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -57,7 +57,7 @@ class Game
         $this->_bootstrap();
         $servicesDir = StringCommon::replaceKeyWords($this->_config["app"]["services_dir"]);
         $loader = new YamlFileLoader($this->_container, new FileLocator($servicesDir));
-        $loader = $this->loadFiles($loader);
+        $this->loadFiles($loader);
     }
 
     /**
@@ -73,7 +73,8 @@ class Game
 
     private function _bootstrap() {
         $this->_bootstrap = array(
-            new DoctrineBootstrap($this->_config)
+            new DoctrineBootstrap($this->_config),
+            new RoutingBootstrap($this->_config)
         );
     }
 
